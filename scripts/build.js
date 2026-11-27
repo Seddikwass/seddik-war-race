@@ -48,7 +48,7 @@ html = html.replace(cdn,
 html = html.replace('<link rel="preconnect" href="https://fonts.googleapis.com">', '<link rel="stylesheet" href="fonts/fonts.css">\n<link rel="preconnect" href="https://fonts.googleapis.com">');
 if (!process.env.KEEP_TEST) html = html.replace(/window\.__swr=\{[^\n]*\};\n/, '');
 // 4) Chargeurs de modèles 3D (Mixamo FBX / glTF) et dossier models/
-const libs = ['libs/fflate.min.js', 'curves/NURBSUtils.js', 'curves/NURBSCurve.js', 'loaders/FBXLoader.js', 'loaders/GLTFLoader.js'];
+const libs = ['libs/fflate.min.js', 'curves/NURBSUtils.js', 'curves/NURBSCurve.js', 'loaders/FBXLoader.js', 'loaders/GLTFLoader.js', 'loaders/RGBELoader.js'];
 fs.mkdirSync(path.join(www, 'lib'), { recursive: true });
 let tags = '';
 for (const l of libs) {
@@ -62,6 +62,8 @@ html = html.replace(tags + '<script>if(!window.THREE)document.write', '<script>i
 html = html.replace("<\\/script>')</script>", "<\\/script>')</script>\n" + tags);
 const modelsSrc = path.join(root, 'assets', 'models');
 if (fs.existsSync(modelsSrc)) fs.cpSync(modelsSrc, path.join(www, 'models'), { recursive: true });
+const genSrc = path.join(root, 'assets', 'gen');
+if (fs.existsSync(genSrc)) fs.cpSync(genSrc, path.join(www, 'assets', 'gen'), { recursive: true });
 fs.writeFileSync(path.join(www, 'index.html'), html);
 
 console.log('www/ prêt :', fs.readdirSync(www).join(', '));

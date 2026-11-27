@@ -146,6 +146,17 @@ def build(type_, p, M):
         cut = cyl('Cut', r + 0.11, W + 1, (0, Y(wz), r), M['dark'], 'X', 40)
         bo = body.modifiers.new('Arch', 'BOOLEAN'); bo.operation = 'DIFFERENCE'; bo.object = cut
         cut.hide_render = True; cut.hide_viewport = True
+    # élargisseurs d'ailes (masquent la découpe des passages de roues)
+    flares = []
+    for wz in (p['wf'], p['wr']):
+        for sd in (-1, 1):
+            bpy.ops.mesh.primitive_torus_add(major_radius=r + 0.13, minor_radius=0.075, major_segments=32, minor_segments=8,
+                                             location=(sd * (hw - 0.02), Y(wz), r), rotation=(0, math.pi / 2, 0))
+            t = bpy.context.active_object; t.name = 'Flare'; t.scale = (1, 1, 1.6)
+            bm = bmesh.new(); bm.from_mesh(t.data)
+            bmesh.ops.delete(bm, geom=[v for v in bm.verts if v.co.x > 0.01], context='VERTS')  # garder la moitié haute (x local -> -z monde)
+            bm.to_mesh(t.data); bm.free(); t.data.materials.append(M['dark']); bpy.ops.object.shade_smooth()
+            flares.append(t)
     # habitacle vitré et toit
     cw = C['w'] / 2; zt = C['top']
     gst = [(Y(C['f']), cw - 0.04, belt - 0.06, belt + 0.02), (Y(C['f'] - C['ws'] * 0.5), cw - 0.06, belt - 0.06, (belt + zt) / 2 + 0.02),
@@ -156,7 +167,7 @@ def build(type_, p, M):
     roof = loft('Roof', [(Y(rf + 0.06), cw - 0.12, zt - 0.06, zt + 0.02), (Y(rf), cw - 0.07, zt - 0.08, zt + 0.05), (Y(rr), cw - 0.07, zt - 0.08, zt + 0.05), (Y(rr - 0.06), cw - 0.12, zt - 0.06, zt + 0.02)], M['paint'], K=20, n=6, subsurf=1)
     parts_paint = [body, roof]
     for sd in (-1, 1):
-        parts_paint.append(box('Mirror', (0.08, 0.18, 0.1), (sd * (hw + 0.07), Y(C['f'] - 0.12), belt + 0.13), M['paint'], 0.02))
+        parts_paint.append(box('Mirror', (0.1, 0.16, 0.09), (sd * (hw + 0.02), Y(C['f'] - 0.1), belt - 0.01), M['paint'], 0.02))
     if p.get('scoop'): parts_paint.append(box('Scoop', (0.7, 1.0, 0.18), (0, Y(p['wf'] - 0.3), hood + 0.1), M['paint'], 0.05))
     if p.get('fins'):
         for sd in (-1, 1): parts_paint.append(box('Fin', (0.08, 1.1, 0.5), (sd * 0.42, Y(-h + 0.7), deck + 0.2), M['paint'], 0.02))
@@ -203,6 +214,7 @@ def build(type_, p, M):
     bpy.ops.mesh.primitive_uv_sphere_add(radius=0.19, location=(0.36, Y((C['f'] + C['r']) / 2 - 0.05), belt + 0.32), segments=20, ring_count=12)
     helm = bpy.context.active_object; helm.name = 'Helmet'; helm.data.materials.append(M['helmet']); bpy.ops.object.shade_smooth()
     # assemblage par matériau (peu d'appels de dessin dans le jeu)
+    dark += flares
     objs = [join(parts_paint, 'Paint_Body'), glass, join(steel, 'Steel_Parts'), join(dark, 'Dark_Parts'), join(head, 'HeadLights'), join(tail_, 'TailLights'), helm]
     if glow: objs.append(join(glow, 'GlowStrips'))
     # roues : pneu arrondi, jante à branches, disque ; origine au centre de la roue
