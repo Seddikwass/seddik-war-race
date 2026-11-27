@@ -1,0 +1,8 @@
+ERROR Failed to load resource: the server responded with a status of 404 (Not Found)
+ERROR Failed to load resource: the server responded with a status of 404 (Not Found)
+RACE k17/day: {"t":"0.0","idx":702,"spd":0}
+RACE refinery/night: {"t":"0.0","idx":702,"spd":0}
+RACE docks/rain: {"t":"0.0","idx":702,"spd":0}
+RACE coast/day: {"t":"0.0","idx":702,"spd":0}
+ARMES {"t":"0.7","state":"run","wep":{"t":"gun","ammo":35,"cd":0.10333333333333333},"dmg":[0,0,0,18,20,0]}
+CANVAS "ok"
