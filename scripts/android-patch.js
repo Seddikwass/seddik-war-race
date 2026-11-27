@@ -1,4 +1,4 @@
-// Après "npx cap add android" : jeu en paysage, plein écran, écran allumé.
+// Après "npx cap add android" : jeu en paysage et en plein écran.
 const fs = require('fs');
 const path = require('path');
 const root = path.join(__dirname, '..');
@@ -14,8 +14,8 @@ const styles = path.join(root, 'android', 'app', 'src', 'main', 'res', 'values',
 if (fs.existsSync(styles)) {
   let s = fs.readFileSync(styles, 'utf8');
   if (!s.includes('android:windowFullscreen')) {
-    s = s.replace(/(<style name="AppTheme.NoActionBar"[^>]*>)/, '$1\n        <item name="android:windowFullscreen">true</item>\n        <item name="android:windowKeepScreenOn">true</item>');
+    s = s.replace(/(<style name="AppTheme.NoActionBar"[^>]*>)/, '$1\n        <item name="android:windowFullscreen">true</item>');
     fs.writeFileSync(styles, s);
   }
 }
-console.log('AndroidManifest et styles mis à jour (paysage, plein écran, écran allumé).');
+console.log('AndroidManifest et styles mis à jour (paysage, plein écran).');

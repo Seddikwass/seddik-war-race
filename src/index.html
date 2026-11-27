@@ -639,6 +639,7 @@ function startRace(cfg){
   race=Object.assign(race||{},{cfg,cars,P,ally,convoy,target:convoy,tunF:1,t:0,cd:3.6,state:'cd',lastCd:4,best:Infinity,msgT:0,doneT:0});
   camYaw=P.yaw;cam.position.set(P.x-Math.sin(P.yaw)*10,5,P.z-Math.cos(P.yaw)*10);
   paused=false;mode='race';show_('hud');$('#touch').classList.add('on');
+  try{if(navigator.wakeLock&&!window.__wl)navigator.wakeLock.request('screen').then(l=>{window.__wl=l;l.addEventListener('release',()=>{window.__wl=null})}).catch(()=>{})}catch(e){}
   $('#hObj').textContent=cfg.ot;drawMiniBase();
 }
 function endRaceCleanup(){if(!race)return;for(const c of race.cars||[]){scene.remove(c.v.g)}clearExtras();if(engG)engG.gain.value=0;race=null}
