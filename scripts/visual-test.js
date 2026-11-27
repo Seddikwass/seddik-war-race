@@ -26,6 +26,12 @@ const log = [];
     const info = await pg.evaluate(() => { const r = __swr.race; return { t: r.t.toFixed(1), idx: r.P.idx, spd: Math.round(r.P.speed * 3.6) }; });
     log.push(`RACE ${track}/${wx}: ${JSON.stringify(info)}`);
   }
+  // scène d'armes : course lancée, canon et mines
+  await pg.evaluate(() => { __swr.startRace({ quick: true, t: 'Armes', ot: 'Test armes', laps: 3, opp: [0, 1, 2, 3, 4], skill: .9, track: 'k17', wx: 'day', car: 'muscle' }); const r = __swr.race; r.state = 'run'; r.cd = 0; r.lastCd = 0; });
+  await pg.waitForTimeout(4000);
+  await pg.evaluate(() => { const r = __swr.race, P = r.P; P.wep = { t: 'gun', ammo: 40, cd: 0 }; for (const c of r.cars) if (!c.isP) c.wep = { t: 'mines', ammo: 3, cd: 0 }; });
+  await pg.keyboard.down('KeyF'); await pg.keyboard.down('ArrowUp'); await pg.waitForTimeout(2500); await pg.screenshot({ path: path.join(out, '09-armes.png') }); await pg.keyboard.up('KeyF');
+  log.push('ARMES ' + JSON.stringify(await pg.evaluate(() => { const r = __swr.race; return { t: r.t.toFixed(1), state: r.state, wep: r.P.wep, dmg: r.cars.map(c => Math.round(c.dmg)) }; })));
   await pg.keyboard.press('KeyC'); await pg.waitForTimeout(1500); await pg.screenshot({ path: path.join(out, '07-camera-proche.png') });
   await pg.keyboard.press('KeyC'); await pg.waitForTimeout(1500); await pg.screenshot({ path: path.join(out, '08-camera-capot.png') });
   const ri = await pg.evaluate(() => { try { return JSON.stringify(document.querySelector('canvas') ? 'ok' : 'no canvas'); } catch (e) { return e.message; } });
