@@ -24,11 +24,13 @@ jobs:
         run: sudo snap install blender --classic && /snap/bin/blender --version
       - name: Modéliser et exporter les véhicules
         run: /snap/bin/blender -b -P tools/blender/build_cars.py -- assets/models/cars tools/renders assets/gen/hdri_day.hdr 2>&1 | tee tools/renders-log.txt | grep -E "VOITURE|TERMINE|Error|error|Traceback|line [0-9]+" || true
+      - name: Modéliser et exporter les décors
+        run: /snap/bin/blender -b -P tools/blender/build_props.py -- assets/models/props tools/renders assets/gen/hdri_day.hdr 2>&1 | tee tools/props-log.txt | grep -E "DECOR|TERMINE|Error|error|Traceback|line [0-9]+" || true
       - name: Enregistrer les ressources dans le dépôt
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           mkdir -p tools/renders
-          git add -f assets/gen assets/models/cars tools/renders tools/renders-log.txt || true
+          git add -f assets/gen assets/models/cars assets/models/props tools/renders tools/renders-log.txt tools/props-log.txt || true
           git commit -m "Ressources 3D générées [${GITHUB_SHA::7}]" || echo "rien à enregistrer"
           git push
