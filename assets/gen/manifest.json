@@ -1,0 +1,122 @@
+{
+ "hdris": {
+  "day": "hdri_day.hdr",
+  "rain": "hdri_rain.hdr",
+  "night": "hdri_night.hdr",
+  "show": "hdri_show.hdr"
+ },
+ "textures": {
+  "asphalt": {
+   "diff": "asphalt_diff.jpg",
+   "nor": "asphalt_nor.jpg",
+   "rough": "asphalt_rough.jpg"
+  },
+  "concrete": {
+   "diff": "concrete_diff.jpg",
+   "nor": "concrete_nor.jpg",
+   "rough": "concrete_rough.jpg"
+  },
+  "ground": {
+   "diff": "ground_diff.jpg",
+   "nor": "ground_nor.jpg",
+   "rough": "ground_rough.jpg"
+  },
+  "rock": {
+   "diff": "rock_diff.jpg",
+   "nor": "rock_nor.jpg",
+   "rough": "rock_rough.jpg"
+  },
+  "metal": {
+   "diff": "metal_diff.jpg",
+   "nor": "metal_nor.jpg",
+   "rough": "metal_rough.jpg"
+  }
+ },
+ "credits": [
+  {
+   "id": "industrial_sunset_02_puresky",
+   "name": "Industrial Sunset 02 (Pure Sky)",
+   "authors": [
+    "Jarod Guest",
+    "Sergej Majboroda"
+   ],
+   "license": "CC0",
+   "url": "https://polyhaven.com/a/industrial_sunset_02_puresky"
+  },
+  {
+   "id": "kloofendal_overcast_puresky",
+   "name": "Kloofendal Overcast (Pure Sky)",
+   "authors": [
+    "Greg Zaal"
+   ],
+   "license": "CC0",
+   "url": "https://polyhaven.com/a/kloofendal_overcast_puresky"
+  },
+  {
+   "id": "moonless_golf",
+   "name": "Moonless Golf",
+   "authors": [
+    "Greg Zaal"
+   ],
+   "license": "CC0",
+   "url": "https://polyhaven.com/a/moonless_golf"
+  },
+  {
+   "id": "industrial_workshop_foundry",
+   "name": "Industrial Workshop Foundry",
+   "authors": [
+    "Dimitrios Savva",
+    "Jarod Guest"
+   ],
+   "license": "CC0",
+   "url": "https://polyhaven.com/a/industrial_workshop_foundry"
+  },
+  {
+   "id": "asphalt_02",
+   "name": "Asphalt 02",
+   "authors": [
+    "Rob Tuytel"
+   ],
+   "license": "CC0",
+   "url": "https://polyhaven.com/a/asphalt_02"
+  },
+  {
+   "id": "concrete_wall_008",
+   "name": "Concrete Wall 008",
+   "authors": [
+    "Dario Barresi",
+    "Charlotte Baglioni"
+   ],
+   "license": "CC0",
+   "url": "https://polyhaven.com/a/concrete_wall_008"
+  },
+  {
+   "id": "dry_ground_01",
+   "name": "Dry Ground 01",
+   "authors": [
+    "Rob Tuytel"
+   ],
+   "license": "CC0",
+   "url": "https://polyhaven.com/a/dry_ground_01"
+  },
+  {
+   "id": "rock_face",
+   "name": "Rock Face",
+   "authors": [
+    "Greg Zaal",
+    "Dario Barresi"
+   ],
+   "license": "CC0",
+   "url": "https://polyhaven.com/a/rock_face"
+  },
+  {
+   "id": "rusty_metal_02",
+   "name": "Rusty Metal 02",
+   "authors": [
+    "Rob Tuytel"
+   ],
+   "license": "CC0",
+   "url": "https://polyhaven.com/a/rusty_metal_02"
+  }
+ ]
+}
