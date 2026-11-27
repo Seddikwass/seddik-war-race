@@ -716,7 +716,7 @@ const rings=[];const ringM=new T.MeshBasicMaterial({color:0x6fd3e8,transparent:t
 const WEPS={gun:{n:'Canon à impulsion',ammo:14,kind:'atk'},mines:{n:'Mines à choc',ammo:3,kind:'atk'},smoke:{n:'Écran de fumée',ammo:2,kind:'def'},shield:{n:'Bouclier',ammo:1,kind:'def'}};
 const W_ATK=['gun','gun','mines'],W_DEF=['smoke','shield'];
 const wepGroup=new T.Group();scene.add(wepGroup);
-const boltGeo=new T.BoxGeometry(.14,.14,1.8),boltMat=new T.MeshBasicMaterial({color:0xffc04a,transparent:true,opacity:.95,blending:T.AdditiveBlending,depthWrite:false});
+const boltGeo=new T.BoxGeometry(.26,.26,3.2),boltMat=new T.MeshBasicMaterial({color:0xffd36a,transparent:true,opacity:.95,blending:T.AdditiveBlending,depthWrite:false});
 const BOLTS=[];for(let i=0;i<70;i++){const m=new T.Mesh(boltGeo,boltMat);m.visible=false;wepGroup.add(m);BOLTS.push({m,life:0,x:0,y:1,z:0,vx:0,vz:0,o:null})}
 const mineGeo=new T.CylinderGeometry(.45,.52,.26,14),mineMat=new T.MeshStandardMaterial({color:0x222222,emissive:0xff2010,emissiveIntensity:1.6,metalness:.7,roughness:.35});
 const MINES=[];for(let i=0;i<16;i++){const m=new T.Mesh(mineGeo,mineMat);m.visible=false;m.castShadow=true;wepGroup.add(m);MINES.push({m,life:0,x:0,z:0,o:null,arm:0})}
