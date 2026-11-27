@@ -1,223 +1,223 @@
-/home/runner/work/seddik-war-race/seddik-war-race/tools/blender/build_cars.py:245: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+/home/runner/work/seddik-war-race/seddik-war-race/tools/blender/build_cars.py:257: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
   world = bpy.data.worlds.new('W'); sc.world = world; world.use_nodes = True; nt = world.node_tree
 /home/runner/work/seddik-war-race/seddik-war-race/tools/blender/build_cars.py:24: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
   m = bpy.data.materials.new(name); m.use_nodes = True
 INFO Draco is available, use library at /snap/blender/7998/lib/libbf_intern_draco_bridge.so
 INFO MeshOptimizer is available, use library at /snap/blender/7998/lib/libbf_intern_meshopt_bridge.so
-08:38:05 | INFO: Starting glTF 2.0 export
-08:38:05 | INFO: Extracting primitive: Cube.019
-08:38:05 | INFO: Primitives created: 1
-08:38:05 | INFO: Extracting primitive: Cube.026
-08:38:05 | INFO: Primitives created: 1
-08:38:05 | INFO: Extracting primitive: Cube.033
-08:38:05 | INFO: Primitives created: 1
-08:38:05 | INFO: Extracting primitive: Cube.040
-08:38:05 | INFO: Primitives created: 1
-08:38:05 | INFO: Extracting primitive: Cylinder.007
-08:38:05 | INFO: Primitives created: 2
-08:38:05 | INFO: Extracting primitive: Glass
-08:38:05 | INFO: Primitives created: 1
-08:38:05 | INFO: Extracting primitive: Cube.006
-08:38:05 | INFO: Primitives created: 1
-08:38:05 | INFO: Extracting primitive: Sphere
-08:38:05 | INFO: Primitives created: 1
-08:38:05 | INFO: Extracting primitive: Body
-08:38:05 | INFO: Primitives created: 2
-08:38:05 | INFO: Extracting primitive: Cube.002
-08:38:05 | INFO: Primitives created: 2
-08:38:05 | INFO: Extracting primitive: Cube.007
-08:38:05 | INFO: Primitives created: 1
-08:38:05 | INFO: Extracting primitive: Cylinder.024
-08:38:05 | INFO: Primitives created: 3
-08:38:05 | INFO: Extracting primitive: Cylinder.027
-08:38:05 | INFO: Primitives created: 3
-08:38:05 | INFO: Extracting primitive: Cylinder.030
-08:38:05 | INFO: Primitives created: 3
-08:38:05 | INFO: Extracting primitive: Cylinder.033
-08:38:05 | INFO: Primitives created: 3
-08:38:05 | INFO: Finished glTF 2.0 export in 0.13236117362976074 s
+08:43:09 | INFO: Starting glTF 2.0 export
+08:43:09 | INFO: Extracting primitive: Cube.019
+08:43:10 | INFO: Primitives created: 1
+08:43:10 | INFO: Extracting primitive: Cube.026
+08:43:10 | INFO: Primitives created: 1
+08:43:10 | INFO: Extracting primitive: Cube.033
+08:43:10 | INFO: Primitives created: 1
+08:43:10 | INFO: Extracting primitive: Cube.040
+08:43:10 | INFO: Primitives created: 1
+08:43:10 | INFO: Extracting primitive: Cylinder.007
+08:43:10 | INFO: Primitives created: 2
+08:43:10 | INFO: Extracting primitive: Glass
+08:43:10 | INFO: Primitives created: 1
+08:43:10 | INFO: Extracting primitive: Cube.006
+08:43:10 | INFO: Primitives created: 1
+08:43:10 | INFO: Extracting primitive: Sphere
+08:43:10 | INFO: Primitives created: 1
+08:43:10 | INFO: Extracting primitive: Body
+08:43:10 | INFO: Primitives created: 2
+08:43:10 | INFO: Extracting primitive: Cube.002
+08:43:10 | INFO: Primitives created: 2
+08:43:10 | INFO: Extracting primitive: Cube.007
+08:43:10 | INFO: Primitives created: 1
+08:43:10 | INFO: Extracting primitive: Cylinder.024
+08:43:10 | INFO: Primitives created: 3
+08:43:10 | INFO: Extracting primitive: Cylinder.027
+08:43:10 | INFO: Primitives created: 3
+08:43:10 | INFO: Extracting primitive: Cylinder.030
+08:43:10 | INFO: Primitives created: 3
+08:43:10 | INFO: Extracting primitive: Cylinder.033
+08:43:10 | INFO: Primitives created: 3
+08:43:10 | INFO: Finished glTF 2.0 export in 0.1143946647644043 s
 /home/runner/work/seddik-war-race/seddik-war-race/tools/blender/build_cars.py:24: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
   m = bpy.data.materials.new(name); m.use_nodes = True
-00:37.197  render           | Saved: 'tools/renders/coupe.png'
+00:46.630  render           | Saved: 'tools/renders/coupe.png'
 
-VOITURE coupe: 15 objets, 7122 faces
-08:38:40 | INFO: Starting glTF 2.0 export
-08:38:40 | INFO: Extracting primitive: Cube.065
-08:38:40 | INFO: Primitives created: 1
-08:38:40 | INFO: Extracting primitive: Cube.072
-08:38:40 | INFO: Primitives created: 1
-08:38:40 | INFO: Extracting primitive: Cube.079
-08:38:40 | INFO: Primitives created: 1
-08:38:40 | INFO: Extracting primitive: Cube.086
-08:38:40 | INFO: Primitives created: 1
-08:38:40 | INFO: Extracting primitive: Cylinder.043
-08:38:40 | INFO: Primitives created: 2
-08:38:40 | INFO: Extracting primitive: Glass.001
-08:38:40 | INFO: Primitives created: 1
-08:38:40 | INFO: Extracting primitive: Cube.048
-08:38:40 | INFO: Primitives created: 1
-08:38:40 | INFO: Extracting primitive: Sphere.001
-08:38:40 | INFO: Primitives created: 1
-08:38:40 | INFO: Extracting primitive: Body.001
-08:38:40 | INFO: Primitives created: 2
-08:38:40 | INFO: Extracting primitive: Cube.044
-08:38:40 | INFO: Primitives created: 2
-08:38:40 | INFO: Extracting primitive: Cube.049
-08:38:40 | INFO: Primitives created: 1
-08:38:40 | INFO: Extracting primitive: Cylinder.060
-08:38:40 | INFO: Primitives created: 3
-08:38:40 | INFO: Extracting primitive: Cylinder.063
-08:38:40 | INFO: Primitives created: 3
-08:38:40 | INFO: Extracting primitive: Cylinder.066
-08:38:40 | INFO: Primitives created: 3
-08:38:40 | INFO: Extracting primitive: Cylinder.069
-08:38:40 | INFO: Primitives created: 3
-08:38:40 | INFO: Finished glTF 2.0 export in 0.05361318588256836 s
-01:09.940  render           | Saved: 'tools/renders/muscle.png'
+VOITURE coupe: 15 objets, 7634 faces
+08:43:51 | INFO: Starting glTF 2.0 export
+08:43:51 | INFO: Extracting primitive: Cube.065
+08:43:51 | INFO: Primitives created: 1
+08:43:51 | INFO: Extracting primitive: Cube.072
+08:43:51 | INFO: Primitives created: 1
+08:43:51 | INFO: Extracting primitive: Cube.079
+08:43:51 | INFO: Primitives created: 1
+08:43:51 | INFO: Extracting primitive: Cube.086
+08:43:51 | INFO: Primitives created: 1
+08:43:51 | INFO: Extracting primitive: Cylinder.043
+08:43:51 | INFO: Primitives created: 2
+08:43:51 | INFO: Extracting primitive: Glass.001
+08:43:51 | INFO: Primitives created: 1
+08:43:51 | INFO: Extracting primitive: Cube.048
+08:43:51 | INFO: Primitives created: 1
+08:43:51 | INFO: Extracting primitive: Sphere.001
+08:43:51 | INFO: Primitives created: 1
+08:43:51 | INFO: Extracting primitive: Body.001
+08:43:51 | INFO: Primitives created: 2
+08:43:51 | INFO: Extracting primitive: Cube.044
+08:43:51 | INFO: Primitives created: 2
+08:43:51 | INFO: Extracting primitive: Cube.049
+08:43:51 | INFO: Primitives created: 1
+08:43:51 | INFO: Extracting primitive: Cylinder.060
+08:43:51 | INFO: Primitives created: 3
+08:43:51 | INFO: Extracting primitive: Cylinder.063
+08:43:51 | INFO: Primitives created: 3
+08:43:51 | INFO: Extracting primitive: Cylinder.066
+08:43:51 | INFO: Primitives created: 3
+08:43:51 | INFO: Extracting primitive: Cylinder.069
+08:43:51 | INFO: Primitives created: 3
+08:43:51 | INFO: Finished glTF 2.0 export in 0.05467653274536133 s
+01:25.778  render           | Saved: 'tools/renders/muscle.png'
 
-VOITURE muscle: 15 objets, 7486 faces
-08:39:12 | INFO: Starting glTF 2.0 export
-08:39:12 | INFO: Extracting primitive: Cube.108
-08:39:12 | INFO: Primitives created: 1
-08:39:12 | INFO: Extracting primitive: Cube.115
-08:39:12 | INFO: Primitives created: 1
-08:39:12 | INFO: Extracting primitive: Cube.122
-08:39:12 | INFO: Primitives created: 1
-08:39:12 | INFO: Extracting primitive: Cube.129
-08:39:12 | INFO: Primitives created: 1
-08:39:12 | INFO: Extracting primitive: Cylinder.079
-08:39:12 | INFO: Primitives created: 2
-08:39:12 | INFO: Extracting primitive: Glass.002
-08:39:12 | INFO: Primitives created: 1
-08:39:12 | INFO: Extracting primitive: Cube.093
-08:39:12 | INFO: Primitives created: 1
-08:39:12 | INFO: Extracting primitive: Sphere.002
-08:39:12 | INFO: Primitives created: 1
-08:39:12 | INFO: Extracting primitive: Body.002
-08:39:12 | INFO: Primitives created: 2
-08:39:12 | INFO: Extracting primitive: Cube.089
-08:39:12 | INFO: Primitives created: 2
-08:39:12 | INFO: Extracting primitive: Cube.094
-08:39:12 | INFO: Primitives created: 1
-08:39:12 | INFO: Extracting primitive: Cylinder.096
-08:39:12 | INFO: Primitives created: 3
-08:39:12 | INFO: Extracting primitive: Cylinder.099
-08:39:12 | INFO: Primitives created: 3
-08:39:12 | INFO: Extracting primitive: Cylinder.102
-08:39:12 | INFO: Primitives created: 3
-08:39:12 | INFO: Extracting primitive: Cylinder.105
-08:39:12 | INFO: Primitives created: 3
-08:39:12 | INFO: Finished glTF 2.0 export in 0.05195760726928711 s
-01:45.310  render           | Saved: 'tools/renders/tank.png'
+VOITURE muscle: 15 objets, 7998 faces
+08:44:30 | INFO: Starting glTF 2.0 export
+08:44:30 | INFO: Extracting primitive: Cube.108
+08:44:30 | INFO: Primitives created: 1
+08:44:30 | INFO: Extracting primitive: Cube.115
+08:44:30 | INFO: Primitives created: 1
+08:44:30 | INFO: Extracting primitive: Cube.122
+08:44:30 | INFO: Primitives created: 1
+08:44:30 | INFO: Extracting primitive: Cube.129
+08:44:30 | INFO: Primitives created: 1
+08:44:30 | INFO: Extracting primitive: Cylinder.079
+08:44:30 | INFO: Primitives created: 2
+08:44:30 | INFO: Extracting primitive: Glass.002
+08:44:30 | INFO: Primitives created: 1
+08:44:30 | INFO: Extracting primitive: Cube.093
+08:44:30 | INFO: Primitives created: 1
+08:44:30 | INFO: Extracting primitive: Sphere.002
+08:44:30 | INFO: Primitives created: 1
+08:44:30 | INFO: Extracting primitive: Body.002
+08:44:30 | INFO: Primitives created: 2
+08:44:30 | INFO: Extracting primitive: Cube.089
+08:44:30 | INFO: Primitives created: 2
+08:44:30 | INFO: Extracting primitive: Cube.094
+08:44:30 | INFO: Primitives created: 1
+08:44:30 | INFO: Extracting primitive: Cylinder.096
+08:44:30 | INFO: Primitives created: 3
+08:44:30 | INFO: Extracting primitive: Cylinder.099
+08:44:30 | INFO: Primitives created: 3
+08:44:30 | INFO: Extracting primitive: Cylinder.102
+08:44:30 | INFO: Primitives created: 3
+08:44:30 | INFO: Extracting primitive: Cylinder.105
+08:44:30 | INFO: Primitives created: 3
+08:44:30 | INFO: Finished glTF 2.0 export in 0.058106422424316406 s
+02:07.400  render           | Saved: 'tools/renders/tank.png'
 
-VOITURE tank: 15 objets, 7160 faces
-08:39:48 | INFO: Starting glTF 2.0 export
-08:39:48 | INFO: Extracting primitive: Cube.149
-08:39:48 | INFO: Primitives created: 1
-08:39:48 | INFO: Extracting primitive: Cube.156
-08:39:48 | INFO: Primitives created: 1
-08:39:48 | INFO: Extracting primitive: Cube.163
-08:39:48 | INFO: Primitives created: 1
-08:39:48 | INFO: Extracting primitive: Cube.170
-08:39:48 | INFO: Primitives created: 1
-08:39:48 | INFO: Extracting primitive: Cylinder.115
-08:39:48 | INFO: Primitives created: 3
-08:39:48 | INFO: Extracting primitive: Glass.003
-08:39:48 | INFO: Primitives created: 1
-08:39:48 | INFO: Extracting primitive: Cube.136
-08:39:48 | INFO: Primitives created: 1
-08:39:48 | INFO: Extracting primitive: Sphere.003
-08:39:48 | INFO: Primitives created: 1
-08:39:48 | INFO: Extracting primitive: Body.003
-08:39:48 | INFO: Primitives created: 2
-08:39:48 | INFO: Extracting primitive: Cube.132
-08:39:48 | INFO: Primitives created: 2
-08:39:48 | INFO: Extracting primitive: Cube.137
-08:39:48 | INFO: Primitives created: 1
-08:39:48 | INFO: Extracting primitive: Cylinder.137
-08:39:48 | INFO: Primitives created: 3
-08:39:48 | INFO: Extracting primitive: Cylinder.140
-08:39:48 | INFO: Primitives created: 3
-08:39:48 | INFO: Extracting primitive: Cylinder.143
-08:39:48 | INFO: Primitives created: 3
-08:39:48 | INFO: Extracting primitive: Cylinder.146
-08:39:48 | INFO: Primitives created: 3
-08:39:48 | INFO: Finished glTF 2.0 export in 0.053104400634765625 s
-02:20.247  render           | Saved: 'tools/renders/rally.png'
+VOITURE tank: 15 objets, 7672 faces
+08:45:12 | INFO: Starting glTF 2.0 export
+08:45:12 | INFO: Extracting primitive: Cube.149
+08:45:12 | INFO: Primitives created: 1
+08:45:12 | INFO: Extracting primitive: Cube.156
+08:45:12 | INFO: Primitives created: 1
+08:45:12 | INFO: Extracting primitive: Cube.163
+08:45:12 | INFO: Primitives created: 1
+08:45:12 | INFO: Extracting primitive: Cube.170
+08:45:12 | INFO: Primitives created: 1
+08:45:12 | INFO: Extracting primitive: Cylinder.115
+08:45:12 | INFO: Primitives created: 3
+08:45:12 | INFO: Extracting primitive: Glass.003
+08:45:12 | INFO: Primitives created: 1
+08:45:12 | INFO: Extracting primitive: Cube.136
+08:45:12 | INFO: Primitives created: 1
+08:45:12 | INFO: Extracting primitive: Sphere.003
+08:45:12 | INFO: Primitives created: 1
+08:45:12 | INFO: Extracting primitive: Body.003
+08:45:12 | INFO: Primitives created: 2
+08:45:12 | INFO: Extracting primitive: Cube.132
+08:45:12 | INFO: Primitives created: 2
+08:45:12 | INFO: Extracting primitive: Cube.137
+08:45:12 | INFO: Primitives created: 1
+08:45:12 | INFO: Extracting primitive: Cylinder.137
+08:45:12 | INFO: Primitives created: 3
+08:45:12 | INFO: Extracting primitive: Cylinder.140
+08:45:12 | INFO: Primitives created: 3
+08:45:12 | INFO: Extracting primitive: Cylinder.143
+08:45:12 | INFO: Primitives created: 3
+08:45:12 | INFO: Extracting primitive: Cylinder.146
+08:45:12 | INFO: Primitives created: 3
+08:45:12 | INFO: Finished glTF 2.0 export in 0.05442309379577637 s
+02:48.754  render           | Saved: 'tools/renders/rally.png'
 
-VOITURE rally: 15 objets, 6773 faces
-08:40:23 | INFO: Starting glTF 2.0 export
-08:40:23 | INFO: Extracting primitive: Cube.196
-08:40:23 | INFO: Primitives created: 1
-08:40:23 | INFO: Extracting primitive: Cube.203
-08:40:23 | INFO: Primitives created: 1
-08:40:23 | INFO: Extracting primitive: Cube.210
-08:40:23 | INFO: Primitives created: 1
-08:40:23 | INFO: Extracting primitive: Cube.217
-08:40:23 | INFO: Primitives created: 1
-08:40:23 | INFO: Extracting primitive: Cylinder.156
-08:40:23 | INFO: Primitives created: 2
-08:40:23 | INFO: Extracting primitive: Glass.004
-08:40:23 | INFO: Primitives created: 1
-08:40:23 | INFO: Extracting primitive: Cube.179
-08:40:23 | INFO: Primitives created: 1
-08:40:23 | INFO: Extracting primitive: Sphere.004
-08:40:23 | INFO: Primitives created: 1
-08:40:23 | INFO: Extracting primitive: Body.004
-08:40:23 | INFO: Primitives created: 2
-08:40:23 | INFO: Extracting primitive: Cube.175
-08:40:23 | INFO: Primitives created: 2
-08:40:23 | INFO: Extracting primitive: Cube.180
-08:40:23 | INFO: Primitives created: 1
-08:40:23 | INFO: Extracting primitive: Cylinder.173
-08:40:23 | INFO: Primitives created: 3
-08:40:23 | INFO: Extracting primitive: Cylinder.176
-08:40:23 | INFO: Primitives created: 3
-08:40:23 | INFO: Extracting primitive: Cylinder.179
-08:40:23 | INFO: Primitives created: 3
-08:40:23 | INFO: Extracting primitive: Cylinder.182
-08:40:23 | INFO: Primitives created: 3
-08:40:23 | INFO: Finished glTF 2.0 export in 0.05283212661743164 s
-02:51.906  render           | Saved: 'tools/renders/proto.png'
+VOITURE rally: 15 objets, 7285 faces
+08:45:53 | INFO: Starting glTF 2.0 export
+08:45:53 | INFO: Extracting primitive: Cube.196
+08:45:53 | INFO: Primitives created: 1
+08:45:53 | INFO: Extracting primitive: Cube.203
+08:45:53 | INFO: Primitives created: 1
+08:45:53 | INFO: Extracting primitive: Cube.210
+08:45:53 | INFO: Primitives created: 1
+08:45:53 | INFO: Extracting primitive: Cube.217
+08:45:53 | INFO: Primitives created: 1
+08:45:53 | INFO: Extracting primitive: Cylinder.156
+08:45:53 | INFO: Primitives created: 2
+08:45:53 | INFO: Extracting primitive: Glass.004
+08:45:53 | INFO: Primitives created: 1
+08:45:53 | INFO: Extracting primitive: Cube.179
+08:45:53 | INFO: Primitives created: 1
+08:45:53 | INFO: Extracting primitive: Sphere.004
+08:45:53 | INFO: Primitives created: 1
+08:45:53 | INFO: Extracting primitive: Body.004
+08:45:53 | INFO: Primitives created: 2
+08:45:53 | INFO: Extracting primitive: Cube.175
+08:45:53 | INFO: Primitives created: 2
+08:45:53 | INFO: Extracting primitive: Cube.180
+08:45:53 | INFO: Primitives created: 1
+08:45:53 | INFO: Extracting primitive: Cylinder.173
+08:45:53 | INFO: Primitives created: 3
+08:45:53 | INFO: Extracting primitive: Cylinder.176
+08:45:53 | INFO: Primitives created: 3
+08:45:53 | INFO: Extracting primitive: Cylinder.179
+08:45:53 | INFO: Primitives created: 3
+08:45:53 | INFO: Extracting primitive: Cylinder.182
+08:45:53 | INFO: Primitives created: 3
+08:45:53 | INFO: Finished glTF 2.0 export in 0.05458331108093262 s
+03:26.843  render           | Saved: 'tools/renders/proto.png'
 
-VOITURE proto: 15 objets, 7630 faces
-08:40:54 | INFO: Starting glTF 2.0 export
-08:40:54 | INFO: Extracting primitive: Cube.246
-08:40:54 | INFO: Primitives created: 1
-08:40:54 | INFO: Extracting primitive: Cube.253
-08:40:54 | INFO: Primitives created: 1
-08:40:54 | INFO: Extracting primitive: Cube.260
-08:40:54 | INFO: Primitives created: 1
-08:40:54 | INFO: Extracting primitive: Cube.267
-08:40:54 | INFO: Primitives created: 1
-08:40:54 | INFO: Extracting primitive: Cylinder.192
-08:40:54 | INFO: Primitives created: 2
-08:40:54 | INFO: Extracting primitive: Glass.005
-08:40:54 | INFO: Primitives created: 1
-08:40:54 | INFO: Extracting primitive: Cube.237
-08:40:54 | INFO: Primitives created: 1
-08:40:54 | INFO: Extracting primitive: Cube.224
-08:40:54 | INFO: Primitives created: 1
-08:40:54 | INFO: Extracting primitive: Sphere.005
-08:40:54 | INFO: Primitives created: 1
-08:40:54 | INFO: Extracting primitive: Body.005
-08:40:54 | INFO: Primitives created: 2
-08:40:54 | INFO: Extracting primitive: Cube.220
-08:40:54 | INFO: Primitives created: 2
-08:40:54 | INFO: Extracting primitive: Cube.225
-08:40:54 | INFO: Primitives created: 1
-08:40:54 | INFO: Extracting primitive: Cylinder.210
-08:40:54 | INFO: Primitives created: 3
-08:40:54 | INFO: Extracting primitive: Cylinder.213
-08:40:54 | INFO: Primitives created: 3
-08:40:54 | INFO: Extracting primitive: Cylinder.216
-08:40:54 | INFO: Primitives created: 3
-08:40:54 | INFO: Extracting primitive: Cylinder.219
-08:40:54 | INFO: Primitives created: 3
-08:40:54 | INFO: Finished glTF 2.0 export in 0.05584311485290527 s
-03:27.090  render           | Saved: 'tools/renders/phoenix.png'
+VOITURE proto: 15 objets, 8142 faces
+08:46:31 | INFO: Starting glTF 2.0 export
+08:46:31 | INFO: Extracting primitive: Cube.246
+08:46:31 | INFO: Primitives created: 1
+08:46:31 | INFO: Extracting primitive: Cube.253
+08:46:31 | INFO: Primitives created: 1
+08:46:31 | INFO: Extracting primitive: Cube.260
+08:46:31 | INFO: Primitives created: 1
+08:46:31 | INFO: Extracting primitive: Cube.267
+08:46:31 | INFO: Primitives created: 1
+08:46:31 | INFO: Extracting primitive: Cylinder.192
+08:46:31 | INFO: Primitives created: 2
+08:46:31 | INFO: Extracting primitive: Glass.005
+08:46:31 | INFO: Primitives created: 1
+08:46:31 | INFO: Extracting primitive: Cube.237
+08:46:31 | INFO: Primitives created: 1
+08:46:31 | INFO: Extracting primitive: Cube.224
+08:46:31 | INFO: Primitives created: 1
+08:46:31 | INFO: Extracting primitive: Sphere.005
+08:46:31 | INFO: Primitives created: 1
+08:46:31 | INFO: Extracting primitive: Body.005
+08:46:31 | INFO: Primitives created: 2
+08:46:31 | INFO: Extracting primitive: Cube.220
+08:46:31 | INFO: Primitives created: 2
+08:46:31 | INFO: Extracting primitive: Cube.225
+08:46:31 | INFO: Primitives created: 1
+08:46:31 | INFO: Extracting primitive: Cylinder.210
+08:46:31 | INFO: Primitives created: 3
+08:46:31 | INFO: Extracting primitive: Cylinder.213
+08:46:31 | INFO: Primitives created: 3
+08:46:31 | INFO: Extracting primitive: Cylinder.216
+08:46:31 | INFO: Primitives created: 3
+08:46:31 | INFO: Extracting primitive: Cylinder.219
+08:46:31 | INFO: Primitives created: 3
+08:46:31 | INFO: Finished glTF 2.0 export in 0.06063723564147949 s
+04:08.214  render           | Saved: 'tools/renders/phoenix.png'
 
-VOITURE phoenix: 16 objets, 7578 faces
+VOITURE phoenix: 16 objets, 8090 faces
 TERMINE
 Blender 5.3.0 (hash 02f0899d78e3 built 2026-11-10 01:31:18)
 
