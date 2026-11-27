@@ -283,6 +283,7 @@ function loadSave(){
 }
 function persist(){try{localStorage.setItem(SAVE_KEY,JSON.stringify(save))}catch(e){}}
 loadSave();
+if(!Number.isFinite(save.credits))save.credits=300;if(save.xp!==undefined&&!Number.isFinite(save.xp))save.xp=0;
 function fixUnlock(){let m=1;for(const k in save.done)if(save.done[k])m=Math.max(m,+k+1);save.unlocked=Math.max(save.unlocked,Math.min(m,20))}fixUnlock();
 
 /* ================= DONNÉES DE JEU ================= */
@@ -1075,8 +1076,8 @@ function drawMini(){if(!miniBase)return;mctx.clearRect(0,0,mini.width,mini.heigh
 function playerFinished(msg){const r=race;if(r.state==='done')return;r.state='done';r.P.auto=true;flash(msg||'ARRIVÉE','');beep(660,.2);setTimeout(()=>beep(990,.4),180);setTimeout(showResults,1600)}
 function showResults(){if(!race)return;const r=race,cfg=r.cfg,rk=ranking(),pos=rk.indexOf(r.P)+1;
   let ok=true;if(cfg.obj==='top3')ok=pos<=3;else if(cfg.obj==='beat'){const k=r.cars.find(c=>c.rival);ok=!k||rk.indexOf(r.P)<rk.indexOf(k)}else if(cfg.obj==='survive')ok=pos<=4&&r.P.destroyed===0;else if(cfg.obj==='parts')ok=r.X.got>=(cfg.need||6);else if(cfg.obj==='team')ok=pos<=4&&rk.indexOf(r.ally)<4;else if(cfg.obj==='convoy')ok=!!r.convoy.finish&&r.convoy.destroyed===0;else if(cfg.obj==='top4')ok=pos<=4;else if(cfg.obj==='relay')ok=r.X.relay.done&&pos<=3;else if(cfg.obj==='quali')ok=r.best<=r.X.qt;else if(cfg.obj==='gates')ok=r.X.gi>=r.X.gates.length;else if(cfg.obj==='top2')ok=pos<=2;else if(cfg.obj==='win')ok=pos===1;else if(cfg.obj==='escape')ok=r.P.destroyed<2&&!!r.P.finish;else if(cfg.obj==='module')ok=!r.X.moduleLost&&r.P.destroyed===0;
-  let gain;if(cfg.quick){gain=[450,300,200,120,80,60][pos-1]||50;ok=true}if(cfg.daily)ok=true;else gain=ok?(save.done[cfg.n]?Math.round(cfg.rew*.4):cfg.rew)+Math.max(0,(4-pos))*60:120;
-  save.credits+=gain;const key=cfg.quick?'quick':'m'+cfg.n;let rec=false;if(!save.best[key]||r.t<save.best[key]){save.best[key]=r.t;rec=true}
+  let gain;if(cfg.quick){gain=[450,300,200,120,80,60][pos-1]||50;ok=true}else gain=ok?(save.done[cfg.n]?Math.round(cfg.rew*.4):cfg.rew)+Math.max(0,(4-pos))*60:120;
+  if(!Number.isFinite(gain))gain=0;save.credits+=gain;const key=cfg.quick?'quick':'m'+cfg.n;let rec=false;if(!save.best[key]||r.t<save.best[key]){save.best[key]=r.t;rec=true}
   let extra='';
   if(ok&&cfg.module){save.modules=save.modules||{};const first=!save.modules[cfg.module];save.modules[cfg.module]=1;const nm=Object.keys(save.modules).length;if(first)extra+='<div class="quote" style="margin:10px 0"><b>Module récupéré : '+MODS[cfg.module]+' ('+nm+'/3)</b><br>'+(nm>=3?'Le Phénix est prêt. Il t’attend au garage.':'Le Phénix prend forme dans le garage de Maya.')+'</div>';if(nm>=3&&!save.owned.includes('phoenix'))save.owned.push('phoenix')}
   if(ok&&cfg.n===20){save.ending=cfg.ending;extra+='<div class="quote" style="margin:10px 0;font-size:19px"><b>'+EPI[cfg.ending].t+'</b><br>'+EPI[cfg.ending].d+'<cite>SEDDIK WAR RACE · fin de la campagne</cite></div>'}
