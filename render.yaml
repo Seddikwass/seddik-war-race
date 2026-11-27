@@ -1,0 +1,10 @@
+services:
+  - type: web
+    runtime: static
+    name: seddik-war-race
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./www
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=3600

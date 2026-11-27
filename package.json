@@ -1,0 +1,25 @@
+{
+  "name": "seddik-war-race",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SEDDIK WAR RACE — jeu 3D de course-combat (web + Android)",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "android:init": "npm run build && npx cap add android && node scripts/android-patch.js && npx @capacitor/assets generate --android && npx cap sync android",
+    "android:sync": "npm run build && npx cap sync android",
+    "android:open": "npx cap open android",
+    "serve": "npx --yes http-server www -p 8080 -c-1"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/app": "^7.0.0",
+    "@capacitor/core": "^7.0.0",
+    "@fontsource/barlow-condensed": "^5.0.0",
+    "@fontsource/black-ops-one": "^5.0.0",
+    "three": "0.128.0"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^7.0.0"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "appId": "com.seddik.warrace",
+  "appName": "SEDDIK WAR RACE",
+  "webDir": "www",
+  "android": {
+    "backgroundColor": "#0e0f10",
+    "allowMixedContent": false
+  }
+}
