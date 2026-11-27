@@ -1041,7 +1041,7 @@ async function loadModels(){let man;try{const r=await fetch('models/manifest.jso
 /* ================= SHOWROOM (menus et garage) ================= */
 const show=new T.Scene();show.background=new T.Color(0x141517);show.fog=new T.Fog(0x141517,16,40);
 const showCam=new T.PerspectiveCamera(42,1,.1,100);
-{const f=new T.Mesh(new T.PlaneGeometry(60,60),M({map:ctex(256,256,(g,w,h)=>{speck(g,w,h,'#3a3a38',.25,6000);g.strokeStyle='rgba(0,0,0,.4)';g.lineWidth=2;for(let i=0;i<w;i+=64){g.beginPath();g.moveTo(i,0);g.lineTo(i,h);g.moveTo(0,i);g.lineTo(w,i);g.stroke()}},8,8),side:T.FrontSide}));f.rotation.x=-Math.PI/2;f.receiveShadow=true;show.add(f);
+{const f=new T.Mesh(new T.PlaneGeometry(60,60),M({map:ctex(256,256,(g,w,h)=>{speck(g,w,h,'#3a3a38',.09,9000);g.strokeStyle='rgba(0,0,0,.4)';g.lineWidth=2;for(let i=0;i<w;i+=64){g.beginPath();g.moveTo(i,0);g.lineTo(i,h);g.moveTo(0,i);g.lineTo(w,i);g.stroke()}},8,8),side:T.FrontSide}));f.rotation.x=-Math.PI/2;f.receiveShadow=true;show.add(f);
  const ring=new T.Mesh(new T.RingGeometry(3.6,4.2,64),M({map:TX.hazard}));ring.rotation.x=-Math.PI/2;ring.position.y=.01;show.add(ring);
  const wall=new T.Mesh(new T.PlaneGeometry(40,14),M({map:ctex(512,256,(g,w,h)=>{speck(g,w,h,'#4a4946',.2,5000);g.fillStyle='rgba(20,20,20,.85)';g.font='bold 170px Impact,sans-serif';g.textAlign='center';g.fillText('K-17',w/2,190);g.fillStyle='#e3b21b';g.fillRect(0,230,w,26)}),side:T.FrontSide}));wall.position.set(0,7,-9);show.add(wall);
  const sp=new T.SpotLight(0xfff1d6,3.2,40,.55,.6,1);sp.position.set(0,12,2);sp.castShadow=true;sp.shadow.mapSize.set(1024,1024);show.add(sp);
@@ -1056,7 +1056,7 @@ let showCar=null,showType=null,showColor=null,showYaw=.6,drag=null;
 function setShowCar(type,color){if(showType===type&&showColor===color)return;if(showCar)show.remove(showCar.g);showCar=buildCar(type,color);showCar.g.traverse(o=>{if(o.isMesh)o.castShadow=true});show.add(showCar.g);showType=type;showColor=color}
 function showroomUpdate(dt){const tt=performance.now()/1000;animHuman(SHOWPPL.maya,tt);animHuman(SHOWPPL.coach,tt);if(!drag)showYaw+=dt*.35;if(showCar){showCar.g.rotation.y=showYaw;for(const w of showCar.wheels)w.rotation.x+=0}
   const wide=innerWidth>700;showCam.position.set(wide?-3.2:0,wide?2.4:3.4,wide?8.2:10.5);showCam.lookAt(wide?-2.6:0,wide?.8:-.4,0);
-  if(wide&&['menu'].includes(mode)){showCam.position.set(3.4,2.4,8.6);showCam.lookAt(2.2,.8,0)}}
+}
 $('#c').addEventListener('pointerdown',e=>{if(mode!=='race'){drag={x:e.clientX,y:showYaw}}});
 addEventListener('pointermove',e=>{if(drag)showYaw=drag.y+(e.clientX-drag.x)*.01});
 addEventListener('pointerup',()=>drag=null);
