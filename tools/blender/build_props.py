@@ -124,9 +124,11 @@ def prison_block(m, W=30, D=14, H=12, floors=3, name='prison_block'):
                 o.append(box((1.4, 0.2, 1.2), (x, sy * (D / 2 + 0.02), z), m['lit'] if lit else m['win']))
                 for b in (-0.45, -0.15, 0.15, 0.45): o.append(box((0.06, 0.12, 1.25), (x + b, sy * (D / 2 + 0.12), z), m['steel']))
                 o.append(box((1.7, 0.35, 0.15), (x, sy * (D / 2 + 0.15), z - 0.7), m['conc']))
-    for k in range(3):
-        o.append(box((2.2, 1.6, 1.4), (-W / 2 + 5 + k * 8, 2, H + 1.5), m['steel'], 0.05))
-        o.append(cyl(0.6, 0.15, (-W / 2 + 5 + k * 8, 2, H + 2.25), m['dark'], 'Z', 16))
+    n_ac = max(1, int((W - 10) / 8))
+    for k in range(n_ac):
+        x = -W / 2 + 4 + k * 8
+        o.append(box((2.2, 1.6, 1.4), (x, 2, H + 1.5), m['steel'], 0.05))
+        o.append(cyl(0.6, 0.15, (x, 2, H + 2.25), m['dark'], 'Z', 16))
     o.append(cyl(2.2, 3.5, (W / 2 - 4, -2, H + 2.6), m['rust'], 'Z', 20))
     for z in (2, H - 1): o.append(tube((-W / 2, -D / 2 - 0.4, z), (W / 2, -D / 2 - 0.4, z), 0.18, m['rust']))
     o.append(box((3, 0.4, 3.2), (0, D / 2 + 0.1, 1.6), m['steel'], 0.04))
