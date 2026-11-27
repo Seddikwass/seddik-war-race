@@ -789,7 +789,10 @@ function setWeather(wx){curWx=wx;const n=wx==='night',r=wx==='rain';scene.backgr
   scene.fog=new T.Fog(n?0x0b0e15:r?0x5c636b:0x8a5a3e,n?50:r?40:120,n?380:r?420:760);
   hemi.intensity=n?.2:r?.38:.38;hemi.color.set(n?0x8090b0:r?0xb0bcc8:0xc6ccd4);sun.intensity=n?.25:r?.35:1.7;sun.color.set(n?0x7f95c8:r?0xc0c8d0:0xffdcb4);headSpot.intensity=n?3.2:r?1.4:0;
   MAT.lamp.emissiveIntensity=n?2.4:1.2;R.toneMappingExposure=n?1.35:1.15;rain.visible=r;MAT.road.roughness=r?.38:.92;MAT.road.metalness=r?.25:.05;
-  W.grip=r?.74:1;W.brake=r?.72:1;W.spd=r?.87:1}
+  W.grip=r?.74:1;W.brake=r?.72:1;W.spd=r?.87:1;
+  if(BGH[wx]){hemi.intensity=r?.18:.15;sun.intensity=r?.3:1.25;scene.fog=new T.Fog(r?0x8c939a:0xb4b2ae,r?40:160,r?420:900);raceExposure=r?.72:.62}else raceExposure=n?1.35:1.15;
+  if(wx==='night'&&ENV.night&&BGH.day){raceExposure=1.1}}
+let raceExposure=1.15;
 
 function playerInput(c,dt){
   const k=keys,t=touch,gp=readPad(),s=save.settings;
@@ -1196,6 +1199,7 @@ function perf(dt){fpsAcc+=dt;fpsN++;if(fpsAcc<1)return;const f=fpsN/fpsAcc;fpsAc
 try{const capApp=window.Capacitor&&window.Capacitor.Plugins&&window.Capacitor.Plugins.App;if(capApp)capApp.addListener('backButton',()=>{if(mode==='race'&&race&&!$('#results').classList.contains('on'))togglePause();else if(!$('#menu').classList.contains('on'))goMenu();else capApp.exitApp()})}catch(e){}
 function frame(now){requestAnimationFrame(frame);const dt=Math.min(.05,(now-last)/1000);last=now;for(const m of MIXERS)m.update(dt);
   try{
+  R.toneMappingExposure=(race&&mode==='race')?raceExposure:(BGH.day?.85:1.15);
   if(race&&(mode==='race')){if(!paused){const n=3;for(let i=0;i<n;i++)step(dt/n);visuals(dt);perf(dt)}else if(engG)engG.gain.value=0;R.render(scene,cam)}
   else{showroomUpdate(dt);R.render(show,showCam)}
   }catch(err){console.error(err)}}

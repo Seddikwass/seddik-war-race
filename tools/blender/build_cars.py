@@ -206,9 +206,9 @@ def build(type_, p, M):
         for i in range(4): head.append(cyl('Spot', 0.1, 0.08, ((i - 1.5) * 0.32, Y(rf + 0.1), zt + 0.3), M['head'], 'Y', 16))
         dark.append(box('Bar', (1.4, 0.2, 0.08), (0, Y(rf + 0.05), zt + 0.2), M['dark'], 0.01))
         dark.append(cyl('Spare', 0.42, 0.24, (0, Y(-h - 0.15), deck + 0.05), M['rubber'], 'Y', 28, 0.05))
-    if p.get('turbine'): dark.append(cyl('Turbine', 0.35, 0.85, (0, Y((rf + rr) / 2), zt + 0.33), M['dark'], 'Y', 24, 0.03))
+    if p.get('turbine'): dark.append(cyl('Turbine', 0.22, 0.7, (0, Y((rf + rr) / 2), zt + 0.22), M['dark'], 'Y', 24, 0.03))
     if p.get('glow'):
-        for sd in (-1, 1): glow.append(box('Glow', (0.04, L * 0.75, 0.05), (sd * (hw + 0.13), 0, bot + 0.42), M['glow'], 0))
+        for sd in (-1, 1): glow.append(box('Glow', (0.03, L * 0.6, 0.04), (sd * (hw + 0.035), 0, bot + 0.5), M['glow'], 0))
     # pilote
     dark.append(box('Seat', (0.42, 0.5, 0.5), (0.36, Y((C['f'] + C['r']) / 2 - 0.15), belt), M['dark'], 0.05))
     bpy.ops.mesh.primitive_uv_sphere_add(radius=0.19, location=(0.36, Y((C['f'] + C['r']) / 2 - 0.05), belt + 0.32), segments=20, ring_count=12)
