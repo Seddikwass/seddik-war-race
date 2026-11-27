@@ -46,7 +46,22 @@ if (!html.includes(cdn)) { console.error('Balise Three.js introuvable dans src/i
 html = html.replace(cdn,
   '<script src="three.min.js"></script>\n<script>if(!window.THREE)document.write(\'<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"><\\/script>\')</script>');
 html = html.replace('<link rel="preconnect" href="https://fonts.googleapis.com">', '<link rel="stylesheet" href="fonts/fonts.css">\n<link rel="preconnect" href="https://fonts.googleapis.com">');
-html = html.replace(/window\.__swr=\{[^\n]*\};\n/, '');
+if (!process.env.KEEP_TEST) html = html.replace(/window\.__swr=\{[^\n]*\};\n/, '');
+// 4) Chargeurs de modèles 3D (Mixamo FBX / glTF) et dossier models/
+const libs = ['libs/fflate.min.js', 'curves/NURBSUtils.js', 'curves/NURBSCurve.js', 'loaders/FBXLoader.js', 'loaders/GLTFLoader.js'];
+fs.mkdirSync(path.join(www, 'lib'), { recursive: true });
+let tags = '';
+for (const l of libs) {
+  const src = path.join(nm, 'three', 'examples', 'js', l);
+  if (fs.existsSync(src)) { const name = path.basename(l); fs.copyFileSync(src, path.join(www, 'lib', name)); tags += `<script src="lib/${name}"></script>\n`; }
+  else console.warn('Chargeur absent :', l);
+}
+html = html.replace('<script>if(!window.THREE)', tags + '<script>if(!window.THREE)');
+// les chargeurs doivent venir APRÈS three.js : on déplace le bloc
+html = html.replace(tags + '<script>if(!window.THREE)document.write', '<script>if(!window.THREE)document.write');
+html = html.replace("<\\/script>')</script>", "<\\/script>')</script>\n" + tags);
+const modelsSrc = path.join(root, 'assets', 'models');
+if (fs.existsSync(modelsSrc)) fs.cpSync(modelsSrc, path.join(www, 'models'), { recursive: true });
 fs.writeFileSync(path.join(www, 'index.html'), html);
 
 console.log('www/ prêt :', fs.readdirSync(www).join(', '));

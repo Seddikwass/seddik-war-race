@@ -1,0 +1,7 @@
+{
+  "characters": {
+    "maya":    { "file": "maya.fbx" },
+    "coach":   { "file": "coach.fbx" },
+    "marshal": { "file": "marshal.fbx" }
+  }
+}
