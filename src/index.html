@@ -656,7 +656,7 @@ function liveryTex(num,col,name){return ctex(256,96,(g,w,h)=>{g.clearRect(0,0,w,
 let carSeq=0;
 function glbCar(type,color,num){const p=CB[type],src=CARGLB[type],g=new T.Group(),body=src.clone(true);g.add(body);let paint=null;const wheels=[],front=[];
   body.traverse(o=>{if(!o.isMesh)return;o.castShadow=true;o.receiveShadow=true;const ms=Array.isArray(o.material)?o.material:[o.material];
-    const out=ms.map(m=>{if(m.name==='Paint'){paint=paint||m.clone();paint.color.set(color);return paint}if(m.name==='Helmet'){const h=m.clone();h.color.set([0xf2c230,0xd6d4cc,0xb8341f,0x2e5a86][carSeq%4]);return h}if(m.name==='Glass'){m.transparent=true;m.opacity=Math.min(m.opacity,.62)}return m});
+    const out=ms.map(m=>{if(m.name==='Paint'){if(!paint){paint=m.clone();paint.color.set(color);paint.envMapIntensity=.55;paint.roughness=.3;paint.metalness=.2}return paint}if(m.name==='Helmet'){const h=m.clone();h.color.set([0xf2c230,0xd6d4cc,0xb8341f,0x2e5a86][carSeq%4]);return h}if(m.name==='Glass'){m.transparent=true;m.opacity=Math.min(m.opacity,.62)}return m});
     o.material=Array.isArray(o.material)?out:out[0]});
   for(const tag of['FL','FR','RL','RR']){const w=body.getObjectByName('Wheel_'+tag);if(!w)continue;w.rotation.order='YXZ';wheels.push(w);if(tag[0]==='F')front.push(w)}
   const extra=buildCar(type,color,num,true);for(const k of['lm','glowH','glowT','flames'])extra[k]&&[].concat(extra[k]).forEach(o=>body.add(o));
