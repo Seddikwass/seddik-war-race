@@ -33,6 +33,14 @@ const log = [];
   await pg.keyboard.down('KeyF'); await pg.keyboard.down('ArrowUp'); await pg.waitForTimeout(2500); await pg.screenshot({ path: path.join(out, '09-armes.png') }); await pg.keyboard.up('KeyF');
   log.push('ARMES ' + JSON.stringify(await pg.evaluate(() => { const r = __swr.race; return { t: r.t.toFixed(1), state: r.state, wep: r.P.wep, dmg: r.cars.map(c => Math.round(c.dmg)) }; })));
   await pg.keyboard.press('KeyC'); await pg.waitForTimeout(1500); await pg.screenshot({ path: path.join(out, '07-camera-proche.png') });
+  // progression : popups, résultats, accueil, succès, livrées
+  await pg.evaluate(() => { const r = __swr.race; r.state = 'run'; __swr.xpEv('pass', 100, 'DÉPASSEMENT'); __swr.xpEv('kill', 150, 'ÉLIMINATION'); });
+  await pg.waitForTimeout(250); await pg.screenshot({ path: path.join(out, '10-popups.png') });
+  await pg.evaluate(() => { const r = __swr.race; r.xpB = { pass: 300, drift: 420, hit: 165, kill: 150 }; r.P.finish = r.t; r.state = 'done'; __swr.showResults(); });
+  await pg.waitForTimeout(800); await pg.screenshot({ path: path.join(out, '11-resultats.png') });
+  await pg.click('#results [data-act=menu]'); await pg.waitForTimeout(1500); await pg.screenshot({ path: path.join(out, '12-accueil.png') });
+  await pg.click('[data-act=ach]'); await pg.waitForTimeout(500); await pg.screenshot({ path: path.join(out, '13-succes.png') });
+  await pg.click('#ach [data-act=menu]'); await pg.click('[data-act=garage]'); await pg.waitForTimeout(2000); await pg.screenshot({ path: path.join(out, '14-garage-livrees.png'), fullPage: true });
   await pg.keyboard.press('KeyC'); await pg.waitForTimeout(1500); await pg.screenshot({ path: path.join(out, '08-camera-capot.png') });
   const ri = await pg.evaluate(() => { try { return JSON.stringify(document.querySelector('canvas') ? 'ok' : 'no canvas'); } catch (e) { return e.message; } });
   log.push('CANVAS ' + ri);
