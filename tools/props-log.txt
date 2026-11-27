@@ -1,51 +1,51 @@
-/home/runner/work/seddik-war-race/seddik-war-race/tools/blender/build_props.py:189: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+/home/runner/work/seddik-war-race/seddik-war-race/tools/blender/build_props.py:191: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
   w = bpy.data.worlds.new('W'); sc.world = w; w.use_nodes = True; nt = w.node_tree; bg = nt.nodes.get('Background')
 /home/runner/work/seddik-war-race/seddik-war-race/tools/blender/build_props.py:21: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
   m = bpy.data.materials.new(name); m.use_nodes = True; b = m.node_tree.nodes.get('Principled BSDF')
 INFO Draco is available, use library at /snap/blender/7998/lib/libbf_intern_draco_bridge.so
 INFO MeshOptimizer is available, use library at /snap/blender/7998/lib/libbf_intern_meshopt_bridge.so
-09:27:54 | INFO: Starting glTF 2.0 export
-09:27:54 | INFO: Extracting primitive: Cylinder
-09:27:54 | INFO: Primitives created: 5
-09:27:54 | INFO: Finished glTF 2.0 export in 0.05429816246032715 s
+09:34:05 | INFO: Starting glTF 2.0 export
+09:34:05 | INFO: Extracting primitive: Cylinder
+09:34:05 | INFO: Primitives created: 5
+09:34:05 | INFO: Finished glTF 2.0 export in 0.04907083511352539 s
 /home/runner/work/seddik-war-race/seddik-war-race/tools/blender/build_props.py:21: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
   m = bpy.data.materials.new(name); m.use_nodes = True; b = m.node_tree.nodes.get('Principled BSDF')
-00:17.886  render           | Saved: 'tools/renders/prop_watchtower.png'
+00:18.886  render           | Saved: 'tools/renders/prop_watchtower.png'
 
 DECOR watchtower: 858 faces, 6.8x6.8x17.7 m
-09:28:17 | INFO: Starting glTF 2.0 export
-09:28:17 | INFO: Extracting primitive: Cube.025
-09:28:17 | INFO: Primitives created: 7
-09:28:17 | INFO: Finished glTF 2.0 export in 0.01669597625732422 s
-00:40.647  render           | Saved: 'tools/renders/prop_prison_block.png'
+09:34:27 | INFO: Starting glTF 2.0 export
+09:34:27 | INFO: Extracting primitive: Cube.025
+09:34:27 | INFO: Primitives created: 7
+09:34:27 | INFO: Finished glTF 2.0 export in 0.014475822448730469 s
+00:40.181  render           | Saved: 'tools/renders/prop_prison_block.png'
 
-DECOR prison_block: 2592 faces, 30.6x15.8x16.4 m
-09:28:34 | INFO: Starting glTF 2.0 export
-09:28:34 | INFO: Extracting primitive: Cube.393
-09:28:34 | INFO: Primitives created: 7
-09:28:34 | INFO: Finished glTF 2.0 export in 0.014209508895874023 s
-00:56.560  render           | Saved: 'tools/renders/prop_barracks.png'
+DECOR prison_block: 2520 faces, 30.6x15.8x16.4 m
+09:34:44 | INFO: Starting glTF 2.0 export
+09:34:44 | INFO: Extracting primitive: Cube.392
+09:34:44 | INFO: Primitives created: 7
+09:34:44 | INFO: Finished glTF 2.0 export in 0.013568639755249023 s
+00:57.131  render           | Saved: 'tools/renders/prop_barracks.png'
 
-DECOR barracks: 1152 faces, 22.4x11.8x11.4 m
-09:28:49 | INFO: Starting glTF 2.0 export
-09:28:49 | INFO: Extracting primitive: Cube.521
-09:28:49 | INFO: Primitives created: 1
-09:28:49 | INFO: Finished glTF 2.0 export in 0.004378080368041992 s
-01:09.766  render           | Saved: 'tools/renders/prop_container.png'
+DECOR barracks: 1008 faces, 16.6x11.8x11.4 m
+09:35:00 | INFO: Starting glTF 2.0 export
+09:35:00 | INFO: Extracting primitive: Cube.518
+09:35:00 | INFO: Primitives created: 1
+09:35:00 | INFO: Finished glTF 2.0 export in 0.004419088363647461 s
+01:11.533  render           | Saved: 'tools/renders/prop_container.png'
 
 DECOR container: 498 faces, 12.3x2.6x2.6 m
-09:29:02 | INFO: Starting glTF 2.0 export
-09:29:02 | INFO: Extracting primitive: Cylinder.070
-09:29:02 | INFO: Primitives created: 5
-09:29:02 | INFO: Finished glTF 2.0 export in 0.01146245002746582 s
-01:25.784  render           | Saved: 'tools/renders/prop_fuel_tank.png'
+09:35:15 | INFO: Starting glTF 2.0 export
+09:35:15 | INFO: Extracting primitive: Cylinder.067
+09:35:15 | INFO: Primitives created: 5
+09:35:15 | INFO: Finished glTF 2.0 export in 0.013665437698364258 s
+01:28.606  render           | Saved: 'tools/renders/prop_fuel_tank.png'
 
 DECOR fuel_tank: 844 faces, 23.7x18.1x13.1 m
-09:29:18 | INFO: Starting glTF 2.0 export
-09:29:18 | INFO: Extracting primitive: Cube.636
-09:29:18 | INFO: Primitives created: 5
-09:29:18 | INFO: Finished glTF 2.0 export in 0.01113271713256836 s
-01:38.007  render           | Saved: 'tools/renders/prop_crane.png'
+09:35:31 | INFO: Starting glTF 2.0 export
+09:35:31 | INFO: Extracting primitive: Cube.633
+09:35:32 | INFO: Primitives created: 5
+09:35:32 | INFO: Finished glTF 2.0 export in 0.00962972640991211 s
+01:41.986  render           | Saved: 'tools/renders/prop_crane.png'
 
 DECOR crane: 1082 faces, 73.1x11.2x32.5 m
 TERMINE DECORS
