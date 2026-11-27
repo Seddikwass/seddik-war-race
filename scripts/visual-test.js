@@ -21,7 +21,7 @@ const log = [];
   let n = 3;
   for (const [track, wx, car] of runs) {
     await pg.evaluate(([track, wx, car]) => { __swr.startRace({ quick: true, t: 'Test', ot: 'Test', laps: 3, opp: [0, 1, 2, 3, 4], skill: .9, track, wx, car }); __swr.race.P.auto = true; }, [track, wx, car]);
-    await pg.waitForTimeout(9000);
+    await pg.waitForTimeout(16000);
     await pg.screenshot({ path: path.join(out, `0${n++}-${track}-${wx}.png`) });
     const info = await pg.evaluate(() => { const r = __swr.race; return { t: r.t.toFixed(1), idx: r.P.idx, spd: Math.round(r.P.speed * 3.6) }; });
     log.push(`RACE ${track}/${wx}: ${JSON.stringify(info)}`);
